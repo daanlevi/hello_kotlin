@@ -4,12 +4,14 @@ import java.io.File
 
 class FileReader {
 
-    fun readFileLineByLineUsingForEachLine(fileName: String) = File(fileName).forEachLine { println(it) }
+    fun readFileLineByLineUsingForEachLine(fileName: String)
+            = File(fileName).forEachLine { println(it) }
 
-    fun readFileAsLinesUsingUseLines(fileName: String): List<String> = File(fileName)
-            .useLines { it.toList() }
+    fun readFileAsLinesUsingUseLines(fileName: String): List<String>
+            = File(fileName).useLines { it.toList() }
 
-    fun readFileAsLinesUsingBufferedReader(fileName: String): List<String> = File(fileName).bufferedReader().readLines()
+    fun readFileAsLinesUsingBufferedReader(fileName: String): List<String>
+            = File(fileName).bufferedReader().readLines()
 
     fun readFileAsLinesUsingReadLines(fileName: String): List<String> = File(fileName).readLines()
 
